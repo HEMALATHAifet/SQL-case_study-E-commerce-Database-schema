@@ -1,0 +1,3 @@
+SELECT name, stock_qty 
+FROM Products
+WHERE stock_qty < 10;
