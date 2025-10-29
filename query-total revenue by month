@@ -1,0 +1,6 @@
+SELECT 
+    EXTRACT(MONTH FROM order_date) AS month,
+    SUM(total_amount) AS total_revenue
+FROM Orders
+GROUP BY EXTRACT(MONTH FROM order_date)
+ORDER BY month;
