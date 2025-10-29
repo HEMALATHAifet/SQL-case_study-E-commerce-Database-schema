@@ -1,0 +1,7 @@
+SELECT 
+    p.name,
+    ROUND(AVG(r.rating),2) AS avg_rating
+FROM Reviews r
+JOIN Products p ON r.product_id = p.product_id
+GROUP BY p.name
+ORDER BY avg_rating DESC;
